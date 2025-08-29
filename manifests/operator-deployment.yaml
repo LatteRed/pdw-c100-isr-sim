@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: drone-operator
+  namespace: drone-sim
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: drone-operator
+  template:
+    metadata:
+      labels:
+        app: drone-operator
+    spec:
+      serviceAccountName: drone-operator-sa
+      containers:
+      - name: operator
+        image: espressored/pdw-drone-operator:latest
+        imagePullPolicy: Always

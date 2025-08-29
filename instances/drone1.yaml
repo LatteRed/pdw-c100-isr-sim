@@ -1,0 +1,9 @@
+apiVersion: simulator.example.com/v1
+kind: Drone
+metadata:
+  name: drone1
+  namespace: drone-sim
+spec:
+  droneID: c100-001
+  mission: Recon Area Alpha
+  status: pending
