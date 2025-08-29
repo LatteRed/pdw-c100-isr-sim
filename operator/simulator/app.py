@@ -9,8 +9,8 @@ app = Flask(__name__)
 
 # Get drone ID from environment (passed by Kubernetes)
 DRONE_ID = os.getenv("DRONE_ID", "drone-unknown")
-LAT_BASE = 37.7749   # San Francisco
-LON_BASE = -122.4194
+LAT_BASE = 52.5200   # Berlin
+LON_BASE = 13.4050
 
 @app.route('/telemetry')
 def telemetry():
